@@ -54,7 +54,7 @@ body {
 }
 
 .chat-window {
-  height: 360px;
+  height: 420px;
   border: 1px solid var(--loreal-border);
   padding: 20px;
   font-size: 18px;
@@ -62,22 +62,34 @@ body {
   overflow-y: auto;
   background: #ffffff;
   white-space: pre-line;
-  border-radius: 12px;
+  border-radius: 16px;
   box-shadow: 0 8px 24px rgba(31, 58, 95, 0.08);
+  display: flex;
+  flex-direction: column;
 }
 
 /* messages */
 .msg {
   margin-bottom: 14px;
   line-height: 1.5;
+  max-width: 80%;
+  padding: 12px 14px;
+  border-radius: 18px;
+  word-wrap: break-word;
 }
 
 .msg.user {
-  color: var(--loreal-black);
+  margin-left: auto;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--loreal-pink) 0%, #ef4f8b 100%);
+  border-bottom-right-radius: 6px;
 }
 
 .msg.ai {
+  margin-right: auto;
   color: var(--loreal-navy);
+  background: #f4e8ee;
+  border-bottom-left-radius: 6px;
 }
 
 /* input row */
@@ -89,7 +101,7 @@ body {
 
 .chat-form input {
   flex: 1;
-  padding: 12px;
+  padding: 12px 16px;
   border: 1px solid var(--loreal-border);
   font-size: 18px;
   border-radius: 999px;
